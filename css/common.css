@@ -161,7 +161,8 @@ h1,
 
 .login-form button,
 .change-color,
-[data-create] {
+[data-create],
+[data-destroy] {
   border: none;
   border-radius: 8px;
   padding: 8px 16px;
@@ -228,16 +229,6 @@ h1,
 
 [data-destroy] {
   background: #ff4e4e;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 120px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
 }
 
 [data-destroy]:hover {
