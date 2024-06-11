@@ -14,16 +14,17 @@ destroyButton.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
   boxes.innerHTML = "";
+  const markup = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     const boxSize = 30 + i * 10;
-    box.classList.add("boxStyle");
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxes.appendChild(box);
+    markup.appendChild(box);
   }
+  boxes.appendChild(markup);
   input.value = "";
 }
 

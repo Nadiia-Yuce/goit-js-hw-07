@@ -28,10 +28,12 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
-images.forEach((image) => {
-  const li = `<li><img src="${image.url}" alt="${image.alt}"></li>`;
+list.insertAdjacentHTML("beforeend", createMarkup(images));
 
-  list.insertAdjacentHTML("beforeend", li);
-});
+function createMarkup(arr) {
+  return arr
+    .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+    .join("");
+}
 
 console.log(list);
